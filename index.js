@@ -7,10 +7,11 @@ var App = {
     activateScanner: function () {
         var scanner = this.configureScanner('.overlay__content'),
             onDetected = function (result) {
-                if(result.codeResult.code.startsWith('978')){
-                    document.querySelector('input#isbn_input').value = result.codeResult.code;
-                    stop();
-                }
+                console.log(result.codeResult.code);
+                // if(result.codeResult.code.startsWith('978')){
+                document.querySelector('input#isbn_input').value = result.codeResult.code;
+                stop();
+                // }
             }.bind(this),
             stop = function () {
                 scanner.stop();
