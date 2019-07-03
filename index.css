@@ -1,81 +1,60 @@
 @charset "UTF-8";
 
-.input-field {
-    display: flex;
-    align-items: center;
-    width: 260px;
-}
-
-.input-field label {
-    flex: 0 0 auto;
-    padding-right: 0.5rem;
-}
-
-.input-field input {
-    flex: 1 1 auto;
-    height: 20px;
-}
-
-.input-field button {
-    flex: 0 0 auto;
-    height: 28px;
-    font-size: 20px;
-}
-
 .overlay {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
     bottom: 0;
     left: 0;
+    overflow: hidden;
+    position: fixed;
     right: 0;
+    top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .overlay__content {
-    top: 50%;
-    position: absolute;
     left: 50%;
+    max-height: 90%;
+    max-width: 320px;
+    position: absolute;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    max-height: 90%;
-    max-width: 800px;
 }
 
 .overlay__close {
-    position: absolute;
-    right: 0;
-    padding: 0.5rem;
-    width: 2rem;
+    background-color: white;
+    border-radius: 2rem;
+    border: 3px solid black;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-size: 1.5rem;
     height: 2rem;
     line-height: 2rem;
-    text-align: center;
-    background-color: white;
-    cursor: pointer;
-    border: 3px solid black;
-    font-size: 1.5rem;
     margin: -1rem;
-    border-radius: 2rem;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 2rem;
     z-index: 100;
-    box-sizing: content-box;
 }
 
 .overlay__content video {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 .overlay__content canvas {
-    position: absolute;
-    width: 100%;
     height: 100%;
     left: 0;
+    position: absolute;
     top: 0;
+    width: 100%;
 }
 
-canvas.drawing, canvas.drawingBuffer {
-    position: absolute;
+canvas.drawing,
+canvas.drawingBuffer {
     left: 0;
+    position: absolute;
     top: 0;
 }

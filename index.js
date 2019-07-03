@@ -7,8 +7,10 @@ var App = {
     activateScanner: function () {
         var scanner = this.configureScanner('.overlay__content'),
             onDetected = function (result) {
-                document.querySelector('input.isbn').value = result.codeResult.code;
-                stop();
+                if(result.codeResult.code.startsWith('978')){
+                    document.querySelector('input#isbn_input').value = result.codeResult.code;
+                    stop();
+                }
             }.bind(this),
             stop = function () {
                 scanner.stop();
@@ -73,8 +75,8 @@ var App = {
                 .fromSource({
                     target: selector,
                     constraints: {
-                        width: 800,
-                        height: 600,
+                        width: 320,
+                        height: 160,
                         facingMode: "environment"
                     }
                 });
