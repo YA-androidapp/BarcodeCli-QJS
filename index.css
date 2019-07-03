@@ -13,7 +13,7 @@
 
 .overlay__content {
     left: 50%;
-    max-height: 90%;
+    max-height: 160px;
     max-width: 320px;
     position: absolute;
     top: 50%;
