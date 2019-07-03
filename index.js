@@ -24,7 +24,7 @@ var App = {
     },
     attachListeners: function () {
         var self = this,
-            button = document.querySelector('.input-field input + button.scan');
+            button = document.querySelector('button#isbn_scan');
 
         button.addEventListener("click", function onClick(e) {
             e.preventDefault();
