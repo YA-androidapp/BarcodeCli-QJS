@@ -13,12 +13,11 @@
 
 .overlay__content {
     left: 50%;
-    max-height: 160px;
-    max-width: 320px;
+    height: 160px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 320px;
 }
 
 .overlay__close {
