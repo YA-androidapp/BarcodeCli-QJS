@@ -25,7 +25,7 @@ var App = {
     },
     attachListeners: function () {
         var self = this,
-            button = document.querySelector('button#isbn_scan');
+            button = document.querySelector('button');
 
         button.addEventListener("click", function onClick(e) {
             e.preventDefault();
@@ -67,17 +67,13 @@ var App = {
     configureScanner: function (selector) {
         if (!this._scanner) {
             this._scanner = Quagga
-                .decoder({
-                    readers: ['ean_reader']
-                })
-                .locator({
-                    patchSize: 'medium'
-                })
+                .decoder({readers: ['ean_reader']})
+                .locator({patchSize: 'medium'})
                 .fromSource({
                     target: selector,
                     constraints: {
-                        width: 320,
-                        height: 160,
+                        width: 800,
+                        height: 600,
                         facingMode: "environment"
                     }
                 });
