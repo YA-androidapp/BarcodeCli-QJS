@@ -8,10 +8,10 @@ var App = {
         var scanner = this.configureScanner('.overlay__content'),
             onDetected = function (result) {
                 console.log(result.codeResult.code);
-                // if(result.codeResult.code.startsWith('978')){
-                document.querySelector('input#isbn_input').value = result.codeResult.code;
-                stop();
-                // }
+                if(result.codeResult.code.startsWith('978')){
+                    document.querySelector('input#isbn_input').value = result.codeResult.code;
+                    stop();
+                }
             }.bind(this),
             stop = function () {
                 scanner.stop();
@@ -25,7 +25,7 @@ var App = {
     },
     attachListeners: function () {
         var self = this,
-            button = document.querySelector('button');
+            button = document.querySelector('button#isbn_scan');
 
         button.addEventListener("click", function onClick(e) {
             e.preventDefault();
